@@ -1,0 +1,15 @@
+.text-field {
+-fx-text-fill: #f3b983;
+-fx-background-color: black;
+-fx-border-radius: 0 0 10 10;
+ -fx-background-radius: 0 0 10 10;
+-fx-effect: dropshadow(three-pass-box, #f2b783, 24.74, 0.2, 0.0, 0.0, 1);
+}
+
+.text-field .prompt {
+	-fx-text-fill: #f3b983;
+}
+
+.text-field:focused {
+
+}

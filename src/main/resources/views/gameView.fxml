@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Pane fx:id="paneMiddle" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #000000;">
+         <children>
+            <ImageView fx:id="backgroundImage" fitHeight="1080.0" fitWidth="1920.0" opacity="0.56" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/898380.jpg" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+            <ListView fx:id="gamePlayersListView" focusTraversable="false" layoutX="1374.0" layoutY="222.0" prefHeight="700.0" prefWidth="423.0" stylesheets="@../styles/gameInstance.css">
+               <padding>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </padding></ListView>
+            <Group layoutX="137.0" layoutY="138.0" />
+            <Pane layoutX="61.0" layoutY="483.0" prefHeight="424.0" prefWidth="540.0" style="-fx-background-color: black; -fx-background-radius: 40;">
+               <children>
+                  <Label fx:id="turnErrorTextLabel" alignment="CENTER" layoutX="17.0" layoutY="10.0" prefHeight="409.0" prefWidth="507.0" style="-fx-background-radius: 40;" textFill="#f3b983" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="24.0" left="14.0" right="14.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.9200000166893005" green="0.6457208395004272" blue="0.5795999765396118" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+            <Pane fx:id="gameOverPane" layoutX="680.0" layoutY="260.0" style="-fx-background-image: url(&quot;..\images\batSignal.jpg&quot;);" visible="false">
+               <children>
+                  <VBox>
+                     <children>
+                        <Group>
+                           <children>
+                              <Label fx:id="GameOverLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="9.0" minHeight="-Infinity" prefHeight="107.0" prefWidth="538.0" style="-fx-background-color: whitesmoke; -fx-background-radius: 20 20 0 0;" text="Game Over" textFill="#726e4f">
+                                 <font>
+                                    <Font name="PlazaITC-Normal" size="84.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow spread="0.03">
+                                       <color>
+                                          <Color red="0.3684210479259491" green="0.22002923488616943" blue="0.22002923488616943" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                                 <padding>
+                                    <Insets top="24.0" />
+                                 </padding>
+                              </Label>
+                              <Group layoutX="9.0" layoutY="116.0" style="-fx-background-radius: 0 0 10 10;">
+                                 <children>
+                                    <ImageView fitHeight="404.0" fitWidth="538.0" opacity="0.97" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/images/batSignal.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="returnButton" layoutX="150.0" layoutY="303.0" mnemonicParsing="false" onAction="#goToMainMenu" prefHeight="75.0" prefWidth="258.0" style="-fx-background-color: whitesmoke; -fx-background-radius: 10 10;" text="Return To Main Menu" textFill="#726e4f">
+                                       <font>
+                                          <Font name="Barlow SemiBold" size="22.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow height="40.05" radius="21.3575" width="47.38">
+                                             <color>
+                                                <Color red="0.3815789520740509" green="0.3620583713054657" blue="0.29148390889167786" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </Button>
+                                 </children>
+                              </Group>
+                              <Label fx:id="GameOverLabel1" alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="520.0" minHeight="-Infinity" prefHeight="64.0" prefWidth="538.0" style="-fx-background-color: whitesmoke; -fx-background-radius: 0 0 20 20;" text=" " textFill="#726e4f">
+                                 <font>
+                                    <Font name="PlazaITC-Normal" size="84.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow offsetY="-0.1" spread="0.03">
+                                       <color>
+                                          <Color red="0.3684210479259491" green="0.22002923488616943" blue="0.22002923488616943" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                                 <padding>
+                                    <Insets top="24.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </Group>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <Pane layoutX="610.0" layoutY="-12.0" prefHeight="657.0" prefWidth="740.0">
+               <children>
+                  <VBox fx:id="prevAnswersVbox" alignment="CENTER" layoutX="6.0" maxHeight="-Infinity" prefHeight="697.0" prefWidth="740.0" spacing="12.0">
+                     <children>
+                        <Group fx:id="turnGroup" layoutX="200.0">
+                           <children>
+                              <VBox alignment="CENTER" fillWidth="false" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="184.0" prefWidth="740.0">
+                                 <children>
+                                    <ImageView fx:id="prevAnswer2ImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <Label fx:id="prevAnswer2NameLabel" alignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Group>
+                        <Group>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <VBox alignment="CENTER" layoutX="10.0" layoutY="57.0" prefHeight="446.0" prefWidth="725.0">
+                                 <children>
+                                    <ImageView fx:id="prevAnswerImageView" fitHeight="401.0" fitWidth="505.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <Label fx:id="prevAnswerNameLabel" alignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="28.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow height="26.86" radius="12.93" spread="0.15" width="26.86" />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                        </Group>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Group layoutX="568.0" layoutY="685.0">
+               <children>
+                  <VBox fx:id="currentPlayerVbox" alignment="CENTER" layoutX="111.0" layoutY="17.0" prefWidth="600.0" spacing="16.0">
+                     <children>
+                        <HBox alignment="CENTER" spacing="150.0">
+                           <children>
+                              <Button fx:id="challengeButton" mnemonicParsing="false" onMouseClicked="#challengePreviousPlayerHandler" prefHeight="62.0" prefWidth="208.0" style="-fx-background-color: #f3b983; -fx-background-radius: 10;" text="CHALLENGE">
+                                 <font>
+                                    <Font name="System Bold" size="28.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow height="33.46" offsetX="-2.0" radius="16.045" spread="0.07" width="32.72" />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="rejectButton" mnemonicParsing="false" onMouseClicked="#rejectPreviousAnswerHandler" prefHeight="62.0" prefWidth="208.0" style="-fx-background-color: #f3b983; -fx-background-radius: 10;" text="REJECT">
+                                 <font>
+                                    <Font name="System Bold" size="28.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow height="38.58" radius="17.325" spread="0.07" width="32.72" />
+                                 </effect>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="84.0" prefWidth="819.0" spacing="10.0">
+                           <children>
+                              <TextField fx:id="nameTextField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" onKeyPressed="#submitName" prefHeight="77.0" prefWidth="592.0" style="-fx-background-radius: 10;">
+                                 <font>
+                                    <Font name="System Bold" size="36.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox fx:id="turnInfoLabelHBox" alignment="CENTER" layoutX="84.0" layoutY="204.0" prefHeight="126.0" prefWidth="655.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="playerTurnLabel" alignment="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="600.0" minHeight="-Infinity" mouseTransparent="true" prefHeight="76.0" prefWidth="410.0" style="-fx-background-color: black; -fx-background-radius: 44;" textAlignment="CENTER" textFill="#f3b983" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="69.36" radius="31.615000000000002" width="59.1">
+                                 <color>
+                                    <Color red="0.10588235408067703" green="0.0784313753247261" blue="0.05882352963089943" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Label>
+                        <Label fx:id="currentEntityTypeLabel" alignment="CENTER" focusTraversable="false" maxHeight="-Infinity" mouseTransparent="true" prefHeight="64.0" prefWidth="209.0" style="-fx-background-color: #f3b983; -fx-background-radius: 44;">
+                           <font>
+                              <Font name="System Bold" size="38.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="174.98" offsetX="5.0" offsetY="5.0" radius="90.9975" spread="0.17" width="191.01">
+                                 <color>
+                                    <Color red="0.10588235408067703" green="0.0784313753247261" blue="0.05882352963089943" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="playerTurnTimerLabel" alignment="CENTER_RIGHT" layoutX="8.0" layoutY="108.0" minWidth="94.0" textAlignment="CENTER" textFill="#eba83c">
+                     <font>
+                        <Font name="BOSTON CAPS" size="63.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="17.41" radius="8.247499999999999" spread="0.53" width="17.58">
+                           <color>
+                              <Color red="0.5" green="0.13500000536441803" blue="0.13500000536441803" opacity="0.7792207598686218" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Label>
+               </children>
+            </Group>
+            <VBox layoutX="128.0" layoutY="280.0" prefHeight="152.0" prefWidth="395.0">
+               <children>
+                  <Label fx:id="roundLabel" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="401.0" textFill="#f0985d">
+                     <font>
+                        <Font name="PlazaITC-Normal" size="96.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gameModeLabel" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="405.0" style="-fx-font-family: BatmanForeverAlternate;" textFill="#795e4b">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="-10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

@@ -1,0 +1,24 @@
+.table-row-cell {
+	-fx-padding: 0 0 0 20;
+}
+
+.table {-fx-border-radius: 20 20 0 0;
+	-fx-background-radius: 20 20 0 0;
+	-fx-opacity: 0.9;
+}
+
+.table-button {
+	-fx-opacity: 0.1;
+}
+
+.table-button-right {
+	-fx-border-radius: 0 20 0 0;
+	-fx-background-radius: 0 0 20 0;
+	-fx-background-color: white;
+}
+
+.table-button-left {
+	-fx-border-radius: 0 0 20 0;
+	-fx-background-radius: 0 0 0 20;
+	-fx-background-color: white;
+}
