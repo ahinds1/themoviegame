@@ -1,6 +1,8 @@
 # themoviegame
 Movie-based association game. Game prototype using Java & JavaFx. [TMDB](https://www.themoviedb.org/) used with [Java wrapper API](https://github.com/holgerbrandl/themoviedbapi/) for movie database.
 
+[![Application Demo](https://img.youtube.com/vi/LGS6fSzIFKE/0.jpg)](http://www.youtube.com/watch?v=LGS6fSzIFKE)
+
 Still under development.
 
 - [Home](https://github.com/ahinds1/themoviegame/wiki/Home)
